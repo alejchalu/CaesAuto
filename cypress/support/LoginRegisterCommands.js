@@ -17,3 +17,10 @@ Cypress.Commands.add('CompletarFormulario',(nombre,apellido,contraseña,direccio
         cy.get('#postcode').type(codigo_postal)
         cy.get('#submitAccount > span').click();
 })
+
+Cypress.Commands.add('Login', (correoRegistroExitoso,contraseña) =>{
+    cy.get('.login').click();
+    cy.get('#email').type(correoRegistroExitoso);
+    cy.get('#passwd').type(contraseña)
+    cy.get('#SubmitLogin > span').click();
+})

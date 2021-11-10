@@ -53,19 +53,21 @@
 
     it('Hacer login',function(){
         cy.visit('http://automationpractice.com/index.php');
-        cy.get('.login').click();
+        cy.Login(this.login.correoRegistroExitoso,this.login.contraseña);
+        /*cy.get('.login').click();
         cy.get('#email').type(this.login.correoRegistroExitoso);
         cy.get('#passwd').type(this.login.contraseña)
-        cy.get('#SubmitLogin > span').click();
+        cy.get('#SubmitLogin > span').click();*/
         cy.get('.info-account').should('contain', 'Welcome to your account');
     })
 
     it('Hacer login error de autentificacion',function(){
         cy.visit('http://automationpractice.com/index.php');
-        cy.get('.login').click();
+        cy.Login(this.login.correoRegistroExitoso,this.login.contraseña_fallida);
+        /*cy.get('.login').click();
         cy.get('#email').type(this.login.correoRegistroExitoso);
         cy.get('#passwd').type(this.login.contraseña_fallida)
-        cy.get('#SubmitLogin > span').click();
+        cy.get('#SubmitLogin > span').click();*/
         cy.get('ol > li').should('contain', 'Authentication failed.');
     })
 })
