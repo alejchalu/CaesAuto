@@ -6,9 +6,14 @@
             this.login = login;
         })
     })
+
+    beforeEach('Visitar sitio',()=>{
+        cy.visit('http://automationpractice.com/index.php');
+    })
+
     describe('hacer registro en e-commerce', () => {
     it('exitoso', function () {
-        cy.visit('http://automationpractice.com/index.php');
+        //cy.visit('http://automationpractice.com/index.php');
         cy.LlenarRegistro(this.login.correoRegistroExitoso);
         /*cy.get('.login').click();
         cy.get('#email_create').type(this.login.correoRegistroExitoso);
@@ -30,7 +35,7 @@
     })
 
     it('fallido por código postal', function () {
-        cy.visit('http://automationpractice.com/index.php');
+        //cy.visit('http://automationpractice.com/index.php');
         cy.LlenarRegistro(this.login.correoRegistroExitoso2);
         /*cy.get('.login').click();
         cy.get('#email_create').type(this.login.correoRegistroExitoso2);
@@ -52,7 +57,7 @@
     })
 
     it('Hacer login',function(){
-        cy.visit('http://automationpractice.com/index.php');
+       // cy.visit('http://automationpractice.com/index.php');
         cy.Login(this.login.correoRegistroExitoso,this.login.contraseña);
         /*cy.get('.login').click();
         cy.get('#email').type(this.login.correoRegistroExitoso);
@@ -62,7 +67,7 @@
     })
 
     it('Hacer login error de autentificacion',function(){
-        cy.visit('http://automationpractice.com/index.php');
+       // cy.visit('http://automationpractice.com/index.php');
         cy.Login(this.login.correoRegistroExitoso,this.login.contraseña_fallida);
         /*cy.get('.login').click();
         cy.get('#email').type(this.login.correoRegistroExitoso);
