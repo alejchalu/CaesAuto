@@ -1,10 +1,10 @@
 {
-  "correoRegistroExitoso": "pepito10@gmail.com",
-  "correoRegistroExitoso2": "pepito11@gmail.com",
-  "correoLoginFallido": "pepito@gmail.com",
+  "correoRegistroExitoso": "pepito21@gmail.com",
+  "correoRegistroExitoso2": "pepito22@gmail.com",
   "nombre": "pepito",
   "apellido": "chaves",
   "contraseña": "prueba123",
+  "contraseña_fallida": "prueba1234",
   "direccion": "25 mts este",
   "ciudad": "alajuela",
   "Estado": "Alabama",
